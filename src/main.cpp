@@ -9,7 +9,8 @@ using namespace std;
 int main(){
     return 0;
     //TODO:
-    // create hash map to keep count of companies
-    // pass info from hash map into a vector in form of pairs
+    // pass in info from csv file (Alex)
+    // create hash map to keep count of companies and number of their occurrences (Alex)
+    // create sorting algorithm (Chris)
     // create heap
 }
