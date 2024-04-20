@@ -55,6 +55,12 @@ build CMakeFiles/dsaProject3.dir/src/main.cpp.o: CXX_COMPILER__dsaProject3_unsca
   OBJECT_DIR = CMakeFiles/dsaProject3.dir
   OBJECT_FILE_DIR = CMakeFiles/dsaProject3.dir/src
 
+build CMakeFiles/dsaProject3.dir/src/sorting.cpp.o: CXX_COMPILER__dsaProject3_unscanned_Debug /Users/pichi/CLionProjects/DSA_project2/dsaProject3/src/sorting.cpp || cmake_object_order_depends_target_dsaProject3
+  DEP_FILE = CMakeFiles/dsaProject3.dir/src/sorting.cpp.o.d
+  FLAGS = -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/dsaProject3.dir
+  OBJECT_FILE_DIR = CMakeFiles/dsaProject3.dir/src
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target dsaProject3
@@ -63,7 +69,7 @@ build CMakeFiles/dsaProject3.dir/src/main.cpp.o: CXX_COMPILER__dsaProject3_unsca
 #############################################
 # Link the executable dsaProject3
 
-build dsaProject3: CXX_EXECUTABLE_LINKER__dsaProject3_Debug CMakeFiles/dsaProject3.dir/src/main.cpp.o
+build dsaProject3: CXX_EXECUTABLE_LINKER__dsaProject3_Debug CMakeFiles/dsaProject3.dir/src/main.cpp.o CMakeFiles/dsaProject3.dir/src/sorting.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk
   OBJECT_DIR = CMakeFiles/dsaProject3.dir
   POST_BUILD = :
