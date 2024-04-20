@@ -5,7 +5,5 @@ set(CMAKE_CXX_STANDARD 14)
 
 add_executable(dsaProject3
         src/main.cpp
-        src/main.cpp
-        src/main.cpp
-        src/sorting.h
-        src/sorting.cpp)
+        src/data_extraction.h
+        src/sorting.h)

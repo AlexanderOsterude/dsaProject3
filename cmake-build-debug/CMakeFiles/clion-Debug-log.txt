@@ -1,4 +1,4 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/ninja -G Ninja -S /Users/pichi/CLionProjects/DSA_project2/dsaProject3 -B /Users/pichi/CLionProjects/DSA_project2/dsaProject3/cmake-build-debug
--- Configuring done (0.0s)
+"C:\Program Files\JetBrains\CLion 2023.2.2\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" -S C:\Users\alexo\Documents\1UF\Spring_24\DSA\proj3\dsaProject3 -B C:\Users\alexo\Documents\1UF\Spring_24\DSA\proj3\dsaProject3\cmake-build-debug
+-- Configuring done (0.1s)
 -- Generating done (0.0s)
--- Build files have been written to: /Users/pichi/CLionProjects/DSA_project2/dsaProject3/cmake-build-debug
+-- Build files have been written to: C:/Users/alexo/Documents/1UF/Spring_24/DSA/proj3/dsaProject3/cmake-build-debug

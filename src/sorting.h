@@ -6,6 +6,7 @@
 #include <unordered_map>
 #include <iostream>
 #include <string>
+#include <vector>
 using namespace std;
 
 vector<pair<string, int>> heapSort(unordered_map<string, int> companies);
