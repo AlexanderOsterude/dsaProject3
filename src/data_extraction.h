@@ -40,7 +40,7 @@ vector<unordered_map<string, int>> extract_columns(){
                 increase_counter(data[0], string(value));
             } else if (current == 8 && row > 0) {
                 increase_counter(data[1], string(value));;
-            } else if (current == 10 && row > 0) {
+            } else if (current == 14 && row > 0) {
                 increase_counter(data[2], string(value));
             }
             current++;
@@ -49,7 +49,7 @@ vector<unordered_map<string, int>> extract_columns(){
     }
 }
 
-void counter_list(vector<pair<string, int>> &company, vector<pair<string, int>> &category, vector<pair<string, int>> &subcategory){
+void counter_list(vector<pair<string, int>> &company, vector<pair<string, int>> &category, vector<pair<string, int>> &chemicals){
     auto data = extract_columns();
     for(int i = 0; i < 3; i++){
         for(auto column: data[i]){
@@ -60,7 +60,7 @@ void counter_list(vector<pair<string, int>> &company, vector<pair<string, int>> 
                 category.emplace_back(column.first,column.second);
             }
             else if(i == 2){
-                subcategory.emplace_back(column.first,column.second);
+                chemicals.emplace_back(column.first,column.second);
             }
 
         }

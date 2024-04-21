@@ -9,7 +9,7 @@
 #include <vector>
 using namespace std;
 
-vector<pair<string, int>> heapSort(unordered_map<string, int> companies);
+vector<pair<string, int>> heapSort(const vector<pair<string, int>> &companies);
 
 
 class Heap{

@@ -4,12 +4,12 @@
 #include "sorting.h"
 
 
-vector<pair<string, int>> heapSort(unordered_map<string, int> companies) {
+vector<pair<string, int>> heapSort(const vector<pair<string, int>> &companies) {
     //vector for priority queue
     Heap h;
     pair<string, int> p;
     for (auto company: companies){
-        p = make_pair(company.first, company.second);
+        p = company;
         h.insert(p);
     }
     vector<pair<string, int>> res = {};

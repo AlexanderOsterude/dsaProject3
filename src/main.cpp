@@ -12,8 +12,8 @@ using namespace std;
 int main(){
     vector<pair<string,int>> companies;
     vector<pair<string,int>> categories;
-    vector<pair<string,int>> subcategories;
-    counter_list(companies, categories, subcategories);
+    vector<pair<string,int>> chemicals;
+    counter_list(companies, categories, chemicals);
     cout << "||^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^||" << endl;
     cout << "||        WELCOME TO CHEMPURGE!         ||" << endl;
     cout << "||______________________________________||" << endl;
@@ -25,7 +25,7 @@ int main(){
 
     while (true){
         cout << "What category would you like to review?" << endl;
-        cout << "1. Companies\n2. Product Categories\n3.Chemicals" << endl;
+        cout << "1. Companies\n2. Product Categories\n3. Chemicals" << endl;
         cout << "Choose a number. Press anything else to quit." << endl;
         string choice;
         getline(cin, choice);
@@ -57,30 +57,60 @@ int main(){
             }
             if (choice == "1"){
                 //companies
-                //TODO: Load right file for result
-                if(high_or_low == "H"){
+                companies = heapSort(companies);
+                auto res = companies;
+                if(entries > res.size()){
+                    cout << "Sorry, number of entries out of range. Please try again and pick a number less than: " << res.size() + 1 << endl;
+                }
+                else if(high_or_low == "H"){
                     //highest count of bad chemicals
+                    for(int i = 0; i < entries; i++){
+                        cout << res[i].first << ": " << res[i].second << endl;
+                    }
                 }
                 else{
                     //lowest count
+                    for(int i = res.size()-1; i >= (res.size()-entries); i--){
+                        cout << res[i].first << ": " << res[i].second << endl;
+                    }
                 }
             }
             else if(choice == "2"){
-                //TODO: Load right file for result
-                if(high_or_low == "H"){
+                categories = heapSort(categories);
+                auto res = categories;
+                if(entries > res.size()){
+                    cout << "Sorry, number of entries out of range. Please try again and pick a number less than: " << res.size() + 1 << endl;
+                }
+                else if(high_or_low == "H"){
                     //highest count of bad chemicals
+                    for(int i = 0; i < entries; i++){
+                        cout << res[i].first << ": " << res[i].second << endl;
+                    }
                 }
                 else{
                     //lowest count
+                    for(int i = res.size()-1; i >= (res.size()-entries); i--){
+                        cout << res[i].first << ": " << res[i].second << endl;
+                    }
                 }
             }
             else if (choice == "3"){
-                //TODO: Load right file for result
-                if(high_or_low == "H"){
+                chemicals = heapSort(chemicals);
+                auto res = chemicals;
+                if(entries > res.size()){
+                    cout << "Sorry, number of entries out of range. Please try again and pick a number less than: " << res.size() + 1 << endl;
+                }
+                else if(high_or_low == "H"){
                     //highest count of bad chemicals
+                    for(int i = 0; i < entries; i++){
+                        cout << res[i].first << ": " << res[i].second << endl;
+                    }
                 }
                 else{
                     //lowest count
+                    for(int i = res.size()-1; i >= (res.size()-entries); i--){
+                        cout << res[i].first << ": " << res[i].second << endl;
+                    }
                 }
             }
         }
