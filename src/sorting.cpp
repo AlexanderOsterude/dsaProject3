@@ -20,6 +20,14 @@ vector<pair<string, int>> heapSort(unordered_map<string, int> companies) {
 
 }
 
+bool isInteger(string s) {
+    for (auto c: s){
+        if (!isdigit(c))
+            return false;
+    }
+    return true;
+}
+
 
 void Heap::heapifyUp(int index) {
     int parent = (index - 1) / 2;
