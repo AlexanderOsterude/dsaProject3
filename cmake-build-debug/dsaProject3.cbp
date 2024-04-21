@@ -86,6 +86,9 @@
 		<Unit filename="C:/Users/alexo/Documents/1UF/Spring_24/DSA/proj3/dsaProject3/src/main.cpp">
 			<Option target="dsaProject3"/>
 		</Unit>
+		<Unit filename="C:/Users/alexo/Documents/1UF/Spring_24/DSA/proj3/dsaProject3/src/sorting.cpp">
+			<Option target="dsaProject3"/>
+		</Unit>
 		<Unit filename="C:/Users/alexo/Documents/1UF/Spring_24/DSA/proj3/dsaProject3/src/sorting.h">
 			<Option target="dsaProject3"/>
 		</Unit>

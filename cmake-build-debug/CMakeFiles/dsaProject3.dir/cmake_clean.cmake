@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/dsaProject3.dir/src/main.cpp.obj"
   "CMakeFiles/dsaProject3.dir/src/main.cpp.obj.d"
+  "CMakeFiles/dsaProject3.dir/src/sorting.cpp.obj"
+  "CMakeFiles/dsaProject3.dir/src/sorting.cpp.obj.d"
   "dsaProject3.exe"
   "dsaProject3.exe.manifest"
   "dsaProject3.pdb"

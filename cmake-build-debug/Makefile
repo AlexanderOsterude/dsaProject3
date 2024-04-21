@@ -152,6 +152,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\dsaProject3.dir\build.make CMakeFiles/dsaProject3.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/sorting.obj: src/sorting.cpp.obj
+.PHONY : src/sorting.obj
+
+# target to build an object file
+src/sorting.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dsaProject3.dir\build.make CMakeFiles/dsaProject3.dir/src/sorting.cpp.obj
+.PHONY : src/sorting.cpp.obj
+
+src/sorting.i: src/sorting.cpp.i
+.PHONY : src/sorting.i
+
+# target to preprocess a source file
+src/sorting.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dsaProject3.dir\build.make CMakeFiles/dsaProject3.dir/src/sorting.cpp.i
+.PHONY : src/sorting.cpp.i
+
+src/sorting.s: src/sorting.cpp.s
+.PHONY : src/sorting.s
+
+# target to generate assembly for a file
+src/sorting.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dsaProject3.dir\build.make CMakeFiles/dsaProject3.dir/src/sorting.cpp.s
+.PHONY : src/sorting.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -164,6 +188,9 @@ help:
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
+	@echo ... src/sorting.obj
+	@echo ... src/sorting.i
+	@echo ... src/sorting.s
 .PHONY : help
 
 
