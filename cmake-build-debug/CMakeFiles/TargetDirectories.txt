@@ -1,3 +1,3 @@
-C:/Users/alexo/Documents/1UF/Spring_24/DSA/proj3/dsaProject3/cmake-build-debug/CMakeFiles/dsaProject3.dir
-C:/Users/alexo/Documents/1UF/Spring_24/DSA/proj3/dsaProject3/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/alexo/Documents/1UF/Spring_24/DSA/proj3/dsaProject3/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/pichi/CLionProjects/DSA_project2/dsaProject3/cmake-build-debug/CMakeFiles/dsaProject3.dir
+/Users/pichi/CLionProjects/DSA_project2/dsaProject3/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/pichi/CLionProjects/DSA_project2/dsaProject3/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -13,3 +13,14 @@ vector<pair<string, int>> heapSort(unordered_map<string, int> companies);
 vector<pair<string, int>> mergeSort(unordered_map<string, int> companies);
 
 
+class Heap{
+    vector<pair<string, int>> heap;
+    void heapifyUp(int index);
+    void heapifyDown(int index);
+public:
+    Heap();
+    void insert(pair<string, int> p);
+    pair<string, int> extractMax();
+    bool isEmpty();
+};
+

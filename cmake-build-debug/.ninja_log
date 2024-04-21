@@ -1,0 +1,8 @@
+# ninja log v5
+1	591	1713666270380735945	CMakeFiles/dsaProject3.dir/src/sorting.cpp.o	962ae6b5f4832745
+0	593	1713666270382732649	CMakeFiles/dsaProject3.dir/src/main.cpp.o	5d4753f3e41c3e4a
+593	711	1713666270502690050	dsaProject3	bccf96954ad037f9
+2	570	1713666297308161737	CMakeFiles/dsaProject3.dir/src/main.cpp.o	5d4753f3e41c3e4a
+570	667	1713666297405361004	dsaProject3	bccf96954ad037f9
+2	570	1713666320119003556	CMakeFiles/dsaProject3.dir/src/main.cpp.o	5d4753f3e41c3e4a
+570	663	1713666320212765112	dsaProject3	bccf96954ad037f9

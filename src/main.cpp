@@ -8,6 +8,20 @@
 using namespace std;
 
 int main(){
+
+    unordered_map<string, int> pairs = {
+            {"apple", 1},
+            {"banana", 10},
+            {"orange", 3},
+            {"weird fruit", -1111},
+            {"grape", 1000},
+            {"pineapple", 6}
+    };
+    vector<pair<string, int>> vec;
+    vec = heapSort(pairs);
+    for (auto p: vec){
+        cout << p.first << ": " << p.second << endl;
+    }
     return 0;
     //TODO:
     // pass in info from csv file (Alex)
