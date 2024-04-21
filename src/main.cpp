@@ -5,10 +5,10 @@
 #include <unordered_map>
 #include <string>
 #include "sorting.h"
+#include "data_extraction.h"
 using namespace std;
 
 int main(){
-    return 0;
     //TODO:
     // pass in info from csv file (Alex)
     // create hash map to keep count of companies and number of their occurrences (Alex)
@@ -19,4 +19,13 @@ int main(){
     //  -Whether they want to display top or bottom companies
     //  -Loop to beginning if they want to do it again or if they want to exit
     //  -
+
+
+    vector<pair<string,int>> companies;
+    vector<pair<string,int>> categories;
+    vector<pair<string,int>> subcategories;
+    counter_list(companies, categories, subcategories);
+
+
+    return 0;
 }
