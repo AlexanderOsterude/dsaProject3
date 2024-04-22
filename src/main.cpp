@@ -22,7 +22,15 @@ int main(){
             "the worst for our health.\n"
             "We collected data on dangerous chemicals and the companies and product categories that "
             "use them the most."  << endl;
-
+    cout << "What type of sort would you like to use?\nType H for heap sort, anything else for stl sort" << endl;
+    string sort_choice;
+    getline(cin, sort_choice);
+    for(int i = 0; i < sort_choice.length(); i++) {
+        sort_choice[i] = toupper(sort_choice[i]);
+    }
+    auto comparer = [](const std::pair<std::string, int>& a, const std::pair<std::string, int>& b){
+        return a.second > b.second;
+    };
     while (true){
         cout << "What category would you like to review?" << endl;
         cout << "1. Companies\n2. Product Categories\n3. Chemicals" << endl;
@@ -57,26 +65,34 @@ int main(){
             }
             if (choice == "1"){
                 //companies
-                companies = heapSort(companies);
+                if(sort_choice == "H") {
+                    companies = heapSort(companies);
+                }else{
+                    sort(companies.begin(), companies.end(), comparer);
+                }
                 auto res = companies;
                 if(entries > res.size()){
                     cout << "Sorry, number of entries out of range. Please try again and pick a number less than: " << res.size() + 1 << endl;
                 }
                 else if(high_or_low == "H"){
-                    //highest count of bad chemicals
+                    //highest count for Companies with chemicals
                     for(int i = 0; i < entries; i++){
-                        cout << res[i].first << ": " << res[i].second << endl;
+                        cout << (i+1) << ". " <<res[i].first << ": " << res[i].second << endl;
                     }
                 }
                 else{
                     //lowest count
                     for(int i = res.size()-1; i >= (res.size()-entries); i--){
-                        cout << res[i].first << ": " << res[i].second << endl;
+                        cout << (i+1) << ". " <<res[i].first << ": " << res[i].second << endl;
                     }
                 }
             }
             else if(choice == "2"){
-                categories = heapSort(categories);
+                if(sort_choice == "H") {
+                    categories = heapSort(categories);
+                }else{
+                    std::sort(categories.begin(), categories.end(), comparer);
+                }
                 auto res = categories;
                 if(entries > res.size()){
                     cout << "Sorry, number of entries out of range. Please try again and pick a number less than: " << res.size() + 1 << endl;
@@ -84,18 +100,22 @@ int main(){
                 else if(high_or_low == "H"){
                     //highest count of bad chemicals
                     for(int i = 0; i < entries; i++){
-                        cout << res[i].first << ": " << res[i].second << endl;
+                        cout << (i+1) << ". " <<res[i].first << ": " << res[i].second << endl;
                     }
                 }
                 else{
                     //lowest count
                     for(int i = res.size()-1; i >= (res.size()-entries); i--){
-                        cout << res[i].first << ": " << res[i].second << endl;
+                        cout << (i+1) << ". " <<res[i].first << ": " << res[i].second << endl;
                     }
                 }
             }
             else if (choice == "3"){
-                chemicals = heapSort(chemicals);
+                if(sort_choice == "H") {
+                    chemicals = heapSort(chemicals);
+                }else{
+                    std::sort(chemicals.begin(), chemicals.end(), comparer);
+                }
                 auto res = chemicals;
                 if(entries > res.size()){
                     cout << "Sorry, number of entries out of range. Please try again and pick a number less than: " << res.size() + 1 << endl;
@@ -103,13 +123,13 @@ int main(){
                 else if(high_or_low == "H"){
                     //highest count of bad chemicals
                     for(int i = 0; i < entries; i++){
-                        cout << res[i].first << ": " << res[i].second << endl;
+                        cout << (i+1) << ". " <<res[i].first << ": " << res[i].second << endl;
                     }
                 }
                 else{
                     //lowest count
                     for(int i = res.size()-1; i >= (res.size()-entries); i--){
-                        cout << res[i].first << ": " << res[i].second << endl;
+                        cout << (i+1) << ". " <<res[i].first << ": " << res[i].second << endl;
                     }
                 }
             }
