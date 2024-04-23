@@ -9,9 +9,11 @@
 #include <vector>
 using namespace std;
 
+//Heap Sort
 vector<pair<string, int>> heapSort(const vector<pair<string, int>> &companies);
 
 
+//Created a Heap to do HeapSort
 class Heap{
     vector<pair<string, int>> heap;
     void heapifyUp(int index);
