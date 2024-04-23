@@ -5,14 +5,18 @@
 
 
 vector<pair<string, int>> heapSort(const vector<pair<string, int>> &companies) {
-    //vector for priority queue
+    //Create a heap object
     Heap h;
+    //Create a pair placeholder to push into the heap
     pair<string, int> p;
+    //for each element in the vector, push that into the heap
     for (auto company: companies){
         p = company;
         h.insert(p);
     }
+    // res will hold the sorted vector of pairs, in descending order
     vector<pair<string, int>> res = {};
+    // while the heap is not empty, keep extracting values
     while (!h.isEmpty()){
         res.push_back(h.extractMax());
     }
@@ -20,6 +24,8 @@ vector<pair<string, int>> heapSort(const vector<pair<string, int>> &companies) {
 
 }
 
+// for main file, to check if user input contains anything that is not integers.
+//This was done to then the number of elements they want to display can be turned into an int
 bool isInteger(string s) {
     for (auto c: s){
         if (!isdigit(c))
@@ -28,7 +34,7 @@ bool isInteger(string s) {
     return true;
 }
 
-
+//Internal components for Heap. HeapifyUp is when inserting elements
 void Heap::heapifyUp(int index) {
     int parent = (index - 1) / 2;
     // while the index is greater than 0 and the parent is less than child, swap em.
@@ -39,6 +45,7 @@ void Heap::heapifyUp(int index) {
     }
 }
 
+//For deleting elements
 void Heap::heapifyDown(int index) {
     //taken directly from my programming quiz for heaps and adapted for project :)
     int left = 2 * index + 1;
@@ -76,19 +83,26 @@ void Heap::heapifyDown(int index) {
     }
 }
 
+//insert value into the heap
 void Heap::insert(pair<string, int> p) {
     heap.push_back(p);
+    //grab element and heapify it up
     heapifyUp(heap.size() - 1);
 }
 
 pair<string, int> Heap::extractMax() {
+    //edge case in case the heap is empty
     if (heap.empty()){
         cout << "Heap is empty. No values to extract." << endl;
         return make_pair("", -1);
     }
+    //grab the value
     pair<string, int> p = heap[0];
+    //pass the last value to the top
     heap[0] = heap[heap.size() - 1];
+    //delete the last one (since now there are two)
     heap.pop_back();
+    //HEAPIFY IT DOWN BABY YEAH
     heapifyDown(0);
     return p;
 }
