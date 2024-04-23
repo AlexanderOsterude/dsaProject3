@@ -5,6 +5,7 @@
 #include <unordered_map>
 #include <string>
 #include <algorithm>
+#include <chrono>
 #include "sorting.h"
 #include "data_extraction.h"
 using namespace std;
@@ -66,9 +67,21 @@ int main(){
             if (choice == "1"){
                 //companies
                 if(sort_choice == "H") {
+                    auto start = chrono::high_resolution_clock::now();
                     companies = heapSort(companies);
+                    auto end = chrono::high_resolution_clock::now();
+                    chrono::duration<double> duration = end - start;
+                    cout << "Execution time for HeapSort(): " << duration.count() << endl;
+
                 }else{
+                    auto start = chrono::high_resolution_clock::now();
                     sort(companies.begin(), companies.end(), comparer);
+                    auto end = chrono::high_resolution_clock::now();
+                    chrono::duration<double> duration = end - start;
+                    cout << "Execution time for sort() from STL: " << duration.count() << endl;
+
+
+
                 }
                 auto res = companies;
                 if(entries > res.size()){
@@ -89,9 +102,18 @@ int main(){
             }
             else if(choice == "2"){
                 if(sort_choice == "H") {
+                    auto start = chrono::high_resolution_clock::now();
                     categories = heapSort(categories);
+                    auto end = chrono::high_resolution_clock::now();
+                    chrono::duration<double> duration = end - start;
+                    cout << "Execution time for HeapSort(): " << duration.count() << endl;
+
                 }else{
+                    auto start = chrono::high_resolution_clock::now();
                     std::sort(categories.begin(), categories.end(), comparer);
+                    auto end = chrono::high_resolution_clock::now();
+                    chrono::duration<double> duration = end - start;
+                    cout << "Execution time for sort() from STL: " << duration.count() << endl;
                 }
                 auto res = categories;
                 if(entries > res.size()){
@@ -112,9 +134,20 @@ int main(){
             }
             else if (choice == "3"){
                 if(sort_choice == "H") {
+                    auto start = chrono::high_resolution_clock::now();
                     chemicals = heapSort(chemicals);
+                    auto end = chrono::high_resolution_clock::now();
+                    chrono::duration<double> duration = end - start;
+                    cout << "Execution time for HeapSort(): " << duration.count() << endl;
+
+
                 }else{
+                    auto start = chrono::high_resolution_clock::now();
                     std::sort(chemicals.begin(), chemicals.end(), comparer);
+                    auto end = chrono::high_resolution_clock::now();
+                    chrono::duration<double> duration = end - start;
+                    cout << "Execution time for sort() from STL: " << duration.count() << endl;
+
                 }
                 auto res = chemicals;
                 if(entries > res.size()){
