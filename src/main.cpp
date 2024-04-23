@@ -18,7 +18,7 @@ int main(){
     vector<pair<string,int>> chemicals;
     counter_list(companies, categories, chemicals);
     auto end = chrono::high_resolution_clock::now();
-    auto duration = end - start;
+    chrono::duration<double, milli> duration = end - start;
 
     cout << "Execution time for counter_list() from data_extraction.h: " << duration.count() << endl;
     cout << "||^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^||" << endl;
@@ -83,14 +83,15 @@ int main(){
                     auto start = chrono::high_resolution_clock::now();
                     companies = heapSort(companies);
                     auto end = chrono::high_resolution_clock::now();
-                    auto duration = end - start;
+                    chrono::duration<double, milli> duration = end - start;
+
                     cout << "Execution time for HeapSort(): " << duration.count() << endl;
 
                 }else{ //STL Sort
                     auto start = chrono::high_resolution_clock::now();
                     sort(companies.begin(), companies.end(), comparer);
                     auto end = chrono::high_resolution_clock::now();
-                    auto duration = end - start;
+                    chrono::duration<double, milli> duration = end - start;
                     cout << "Execution time for sort() from STL: " << duration.count() << endl;
 
 
@@ -103,14 +104,14 @@ int main(){
                     auto start = chrono::high_resolution_clock::now();
                     categories = heapSort(categories);
                     auto end = chrono::high_resolution_clock::now();
-                    auto duration = end - start;
+                    chrono::duration<double, milli> duration = end - start;
                     cout << "Execution time for HeapSort(): " << duration.count() << endl;
 
                 }else{ //STL Sort
                     auto start = chrono::high_resolution_clock::now();
                     std::sort(categories.begin(), categories.end(), comparer);
                     auto end = chrono::high_resolution_clock::now();
-                    auto duration = end - start;
+                    chrono::duration<double, milli> duration = end - start;
                     cout << "Execution time for sort() from STL: " << duration.count() << endl;
                 }
                 res = categories;
@@ -120,7 +121,7 @@ int main(){
                     auto start = chrono::high_resolution_clock::now();
                     chemicals = heapSort(chemicals);
                     auto end = chrono::high_resolution_clock::now();
-                    auto duration = end - start;
+                    chrono::duration<double, milli> duration = end - start;
                     cout << "Execution time for HeapSort(): " << duration.count() << endl;
 
 
@@ -128,7 +129,7 @@ int main(){
                     auto start = chrono::high_resolution_clock::now();
                     std::sort(chemicals.begin(), chemicals.end(), comparer);
                     auto end = chrono::high_resolution_clock::now();
-                    auto duration = end - start;
+                    chrono::duration<double, milli> duration = end - start;
                     cout << "Execution time for sort() from STL: " << duration.count() << endl;
 
                 }
